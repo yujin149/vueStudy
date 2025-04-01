@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Quickly</title>
+  </head>
+  <body>
+    <!-- 
+        v- : 디렉티브(directive)
+        v-bind : 데이터(상태) 속성에 바인딩할 때 사용.
+    -->
+    <div id="app">
+      <!-- placeholder 속성을 vue 인스턴스의 message 속성으로 최신상태 유지 (반응형 동작) -->
+      <input type="text" v-bind:placeholder="message" />
+      <hr />
+      <button v-on:click="reverseMessage">click</button>
+      <hr />
+
+      <!-- 
+        v-bind는 단방향으로 바인딩해서 input에 value를 수정하면, 변경되지 않음.
+        따라서, 양방향인 v-model을 사용. 
+      -->
+      {{ userName }} <br />
+      <!-- <input type="text" v-bind:value="userName"> -->
+      <input type="text" v-model="userName" />
+
+      <hr />
+      <!-- visible이 false이기 때문에, p태그가 안보임. => 버튼 클릭 시 true로 변경하여 p태그 보임. -->
+      <p v-if="visible">v-if</p>
+      <button type="button" v-on:click="visible = true">visible</button>
+
+      <hr />
+      <ul>
+        <li v-for="item in items">{{item}}</li>
+      </ul>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "텍스트를 입력해주세요.",
+            userName: "유진",
+            visible: false,
+            items: ["사과", "딸기", "포도"],
+          };
+        },
+        methods: {
+          hello() {
+            alert("hello!!");
+          },
+          reverseMessage() {
+            this.message = this.message.split("").reverse().join("");
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

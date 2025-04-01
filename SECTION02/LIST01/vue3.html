@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue3</title>
+  </head>
+  <body>
+    <div id="app">
+        <!-- 
+          선언적 렌더링 : 템플릿 구문 {{ 데이터 }} 화룡ㅇ하여 데이터를 선언적으로 출력
+          반응성 : JavaScript 상태 변경을 자동으로 추적하고 변경이 발생하면 DOM을 효율적으로 업데이트
+        -->
+      <button type="button" v-on:click="counter++">Counter : {{ counter }}</button>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data(){
+            return {counter : 100}
+        }
+      })
+      app.mount("#app");
+    </script>
+  </body>
+</html>

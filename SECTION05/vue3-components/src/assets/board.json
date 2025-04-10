@@ -1,0 +1,38 @@
+[
+    {
+        "id" : "1",
+        "type" : "NEWS",
+        "title" : "게시판 제목1",
+        "contents" : "게시판 내용1"
+    },
+    {   
+        "id" : "2",
+        "type" : "NOTICE",
+        "title" : "게시판 제목2",
+        "contents" : "게시판 내용2"
+    },
+    {
+        "id" : "3",
+        "type" : "NOTICE",
+        "title" : "게시판 제목3",
+        "contents" : "게시판 내용3"
+    },
+    {
+        "id" : "4",
+        "type" : "NEWS",
+        "title" : "게시판 제목4",
+        "contents" : "게시판 내용4"
+    },
+    {
+        "id" : "5",
+        "type" : "NEWS",
+        "title" : "게시판 제목5",
+        "contents" : "게시판 내용5"
+    },
+    {
+        "id" : "6",
+        "type" : "NEWS",
+        "title" : "게시판 제목6",
+        "contents" : "게시판 내용6"
+    }
+]

@@ -1,0 +1,11 @@
+{
+  "_comment": [
+    "Prettier 설정 스키마",
+    "작은 따옴표 사용",
+    "매개변수 하나일 때 괄호 생략"
+  ],
+  "$schema": "https://json.schemastore.org/prettierrc",
+
+  "singleQuote": true,
+  "arrowParens": "avoid"
+}

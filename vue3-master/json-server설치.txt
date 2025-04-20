@@ -1,0 +1,17 @@
+
+json-server 설치
+npm install -D json-server@0.17.4
+
+start JSON Server (현재 로컬에만 설치했기 때문에, npx 명령어로 수행)
+npx json-server --watch db.json
+
+db.json 생성 -> 여기가 db라고 보면 됨.
+
+json은 ""으로 감싸줘야함.
+
+포트 5000번으로 지정 
+npx json-server --watch db.json --port 5000 
+
+package.json에서 scripts에 db라고 지정  (json-server --watch db.json --port 5000)
+따라서, 다음 실행할 때, npm run db 명령어 실행 가능.
+
